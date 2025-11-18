@@ -1,15 +1,22 @@
-import './App.css'
-import Header from './components/Header';
+import { entradas } from "./data/entradas";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import type { Entrada } from "./types/entrada";
+import BlogPost from "./components/BlogPost.tsx";
 
-function App() {
+const App = () => {
+  const entrada: Entrada = entradas[0];
 
   return (
     <div className="app-container">
       <Header />
-      <p>Hola mundo</p>
+      <main className="main-content">
+        <BlogPost entrada={entrada} />
+      </main>
+      <Footer />
     </div>
   );
-  // Incluir Footer
-}
+};
 
-export default App
+export default App;
