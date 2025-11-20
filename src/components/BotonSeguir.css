@@ -14,3 +14,14 @@
     color: white;
     border-color: darkred;
 }
+
+.boton-seguir-mensaje-dejar {
+    display: none;
+}
+
+.boton-seguir.boton-seguir-siguiendo:hover .boton-seguir-mensaje-dejar {
+    display: inline;
+}
+.boton-seguir.boton-seguir-siguiendo:hover .boton-seguir-mensaje {
+    display: none;
+}

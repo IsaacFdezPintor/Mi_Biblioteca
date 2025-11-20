@@ -5,12 +5,15 @@ function BotonSeguir() {
     const [siguiendo, setSiguiendo] = useState(false);
 
     function handleClick() {
-        console.log("Siguiendo vale: " + siguiendo)
-        setSiguiendo(true);
-        console.log("Siguiendo vale: " + siguiendo)
+        setSiguiendo(!siguiendo);
     }
 
-    return (<button className={siguiendo ? "boton-seguir boton-seguir-siguiendo" : "boton-seguir"} onClick={handleClick}>{ siguiendo ? "Siguiendo" : "Seguir"}</button>);
+    return (
+    <button className={siguiendo ? "boton-seguir boton-seguir-siguiendo" : "boton-seguir"} onClick={handleClick}>
+        <span className="boton-seguir-mensaje">{ siguiendo ? "Siguiendo" : "Seguir"}</span>
+        { siguiendo && <span className="boton-seguir-mensaje-dejar">Dejar de seguir</span>}
+    </button>
+        );
 }
 
 export default BotonSeguir;
