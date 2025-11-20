@@ -1,4 +1,5 @@
 import type { Comentario } from "../types/comentario";
+import "./Comments.css"
 
 interface CommentsProps {
     comentarios : Comentario[];

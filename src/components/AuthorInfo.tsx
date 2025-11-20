@@ -1,5 +1,6 @@
 import type { Autor } from "../types/autor";
 import BotonSeguir from "./BotonSeguir";
+import "./AuthorInfo.css";
 
 interface AuthorInfoProps {
     autor : Autor

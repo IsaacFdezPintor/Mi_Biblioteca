@@ -2,6 +2,7 @@ import type { Entrada } from "../types/entrada";
 import AuthorInfo from "./AuthorInfo";
 import CategoryPosts from "./CategoryPosts";
 import TagCloud from "./TagCloud";
+import "./SideBar.css"
 
 interface SideBarProps {
     entradaMostrada: Entrada,

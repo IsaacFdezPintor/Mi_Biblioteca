@@ -1,5 +1,6 @@
 import type { Entrada } from "../types/entrada";
 import PostCard from "./PostCard";
+import "./RelatedPosts.css"
 
 interface RelatedPostsProps {
     entradasRelacionadas : Entrada[]

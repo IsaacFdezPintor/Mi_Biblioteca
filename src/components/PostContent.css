@@ -1,0 +1,15 @@
+/* === POST CONTENT === */
+.post-content__title {
+  color: #0d6efd;
+  margin-top: 0;
+}
+
+.post-content__image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.post-content__text {
+  line-height: 1.6;
+}

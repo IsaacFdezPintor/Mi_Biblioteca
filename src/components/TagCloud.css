@@ -1,0 +1,13 @@
+/* === TAG CLOUD === */
+.tag-cloud h3 {
+  color: #0d6efd;
+}
+
+.tag-cloud__container span {
+  background-color: #e9ecef;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin: 3px;
+  display: inline-block;
+  font-size: 0.9em;
+}

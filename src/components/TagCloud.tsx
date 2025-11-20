@@ -1,3 +1,5 @@
+import "./TagCloud.css"
+
 interface TagCloudProps {
     etiquetas: string[]
 }

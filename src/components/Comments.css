@@ -1,0 +1,22 @@
+/* === COMMENTS === */
+.comments h3 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.comments ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comments li {
+  background-color: #f1f1f1;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.comments__empty {
+  font-style: italic;
+  color: #777;
+}

@@ -1,0 +1,13 @@
+/* === CATEGORY POSTS === */
+.category-posts h3 {
+  color: #0d6efd;
+}
+
+.category-posts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.category-posts li {
+  margin: 5px 0;
+}
