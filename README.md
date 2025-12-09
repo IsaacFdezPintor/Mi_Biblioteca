@@ -74,4 +74,4 @@ export default defineConfig([
 
 ## Configurar eslint
 
-npm init @eslint/config@latest
+npm init @eslint/config@latest# Mi_Biblioteca
