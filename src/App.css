@@ -1,28 +1,66 @@
-/* === GLOBAL === */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  background-color: #fafafa;
-  color: #333;
-}
-
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* App.css */
+
+/* App.css */
+/* ... */
 
 .main-content {
   display: flex;
-  gap: 30px;
   flex: 1;
-  padding: 30px;
+  padding: 20px;
+  gap: 20px;
+  /* ASEGÚRATE DE QUE ESTAS DOS LÍNEAS NO TENGAN 1200PX Y AUTO */
+  max-width: 100%;  /* DEBE SER 100% */
+  margin: 0;        /* DEBE SER 0 */
+  width: 100%;
 }
 
-/* === Layout de listados === */
-.related-posts__list,
-.category-posts__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+/* ... */
+
+/* El resto se queda igual... */
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
+/* index.css o CSS global */
+body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.right-column {
+  flex: 2; /* Será el doble de ancho que left-column (33%/66%) */
 }

@@ -1,29 +1,64 @@
-import { entradas } from "./data/entradas";
-import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import type { Entrada } from "./types/entrada";
-import BlogPost from "./components/BlogPost.tsx";
-import SideBar from "./components/SideBar.tsx";
+import React, { useState } from 'react';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
+import { SongList } from './components/CancionLista/CancionLista';
+import { CancionDetalle } from './components/CancionDetalles/CancionDetalles';
 
+import { CancionForm } from './components/CancionForm/CancionForm';
+// ⬅️ Importamos la interfaz Song
+import { type Cancion } from './types/Cancion';
+// ⬅️ Importamos los datos iniciales
+import { INITIAL_SONG_DATA } from './data/initialSongs'; 
 
-const App = () => {
-  const entrada: Entrada = entradas[0];
+import './App.css';
+
+function App() {
+  // --- ESTADOS COMPARTIDOS ---
+  // 1. Estado de la lista de canciones. Usamos la constante importada.
+  const [songs, setSongs] = useState<Cancion[]>(INITIAL_SONG_DATA); // ⬅️ CAMBIO AQUÍ
+
+  // 2. Estado del elemento seleccionado
+  const [selectedSong, setSelectedSong] = useState<Cancion | null>(null);
+
+  // Función Callback: Añadir canción
+  const handleAddSong = (titulo: string, artista: string, genero: string) => {
+    const newSong: Cancion = {
+      id: Date.now(),
+      titulo,
+      artista,
+      genero
+    };
+    setSongs([...songs, newSong]);
+  };
+
+  // Función Callback: Seleccionar canción
+  const handleSelectSong = (song: Cancion) => {
+    setSelectedSong(song);
+  };
+
+  // Función Callback: Cerrar panel
+  const handleCloseDetail = () => {
+    setSelectedSong(null);
+  };
 
   return (
     <div className="app-container">
       <Header />
+      
       <main className="main-content">
-        { entrada == undefined ? <p>La entrada no existe</p> : 
-        <>
-          <BlogPost entradaMostrada={entrada} listadoEntradas={entradas} />
-          <SideBar entradaMostrada={entrada} entradas={entradas} />
-        </>
-        }
+        <div className="left-column">
+          <CancionForm onAgregarCancion={handleAddSong} />
+          <SongList canciones={songs} onSelectSong={handleSelectSong} />
+        </div>
+        
+        <div className="right-column">
+          <CancionDetalle cancion={selectedSong} onCerrar={handleCloseDetail} />
+        </div>
       </main>
+
       <Footer />
     </div>
   );
-};
+}
 
 export default App;

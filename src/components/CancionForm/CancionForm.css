@@ -1,0 +1,13 @@
+.panel {
+  padding: 20px;
+  background-color: #ecf0f1;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.form-panel input, .form-panel select {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
