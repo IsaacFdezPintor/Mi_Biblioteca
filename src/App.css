@@ -5,37 +5,16 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* App.css */
-
-/* App.css */
-/* ... */
-
 .main-content {
   display: flex;
   flex: 1;
   padding: 20px;
   gap: 20px;
-  /* ASEGÚRATE DE QUE ESTAS DOS LÍNEAS NO TENGAN 1200PX Y AUTO */
   max-width: 100%;  /* DEBE SER 100% */
   margin: 0;        /* DEBE SER 0 */
   width: 100%;
 }
 
-/* ... */
-
-/* El resto se queda igual... */
-
-.left-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.right-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
 
 /* Responsivo para móviles */
 @media (max-width: 768px) {
@@ -50,17 +29,42 @@ body, #root {
   width: 100%;
   min-height: 100vh;
 }
-.left-column {
+.columnaderecha{  
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.right-column {
+.columnaizquierda {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 .right-column {
-  flex: 2; /* Será el doble de ancho que left-column (33%/66%) */
+  flex: 2; 
+}
+
+.tema-claro {
+    background-color: #ffffff;
+    color: #333333;
+    transition: all 0.3s;
+    min-height: 100vh; 
+}
+
+.tema-oscuro {
+    background-color: #282c34;
+    color: #f0f0f0;
+    transition: all 0.3s;
+}
+
+.tema-oscuro .panel {
+    background-color: #3c414a;
+    border: 1px solid #666;
+}
+
+.tema-claro .panel {
+    background-color: #f0f0f0;
+        color: #333333;
+
+    border: 1px solid #ccc;
 }

@@ -1,6 +1,7 @@
 import './Footer.css';
 
-export const Footer = () => {
+// Componente sin props 
+export default function Footer() {
   return (
     <footer className="footer">
       <p>Mi Biblioteca  - Isaac Fernández Pintor</p>

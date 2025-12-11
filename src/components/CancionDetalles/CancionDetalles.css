@@ -13,10 +13,5 @@
   color: #7f8c8d;
   font-style: italic;
 }
-.genero {
-    background: #e67e22;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-}
+
 .reproducciones { margin-top: 20px; border-top: 1px solid #7f8c8d; padding-top: 20px;}

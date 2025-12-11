@@ -1,6 +1,5 @@
 // Definición centralizada de la interfaz Song
-export interface Cancion {
-  id: number;
+export type Cancion ={
   titulo: string;
   artista: string;
   genero: string;

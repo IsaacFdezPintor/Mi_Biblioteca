@@ -14,9 +14,7 @@ interface BotonProps {
   deshabilitar?: boolean;
 }
 
-// Si no se da 'variant', por defecto será 'primary'.
-export const Boton = ({ texto, onClick, estilo = 'azul', deshabilitar }: BotonProps) => {
-  
+export default function Boton ({ texto, onClick, estilo = 'azul', deshabilitar }: BotonProps) {  
   return (
     <button 
       // Combina las clases CSS: 'custom-btn' (base) y la clase específica según el 'variant' (ej: 'btn-primary').
